@@ -7,18 +7,21 @@
 
 #import "TYUserInterfaceAgent.h"
 #import "TYTimerContext.h"
+#import "TYQuoteUI.h"
 
 @implementation TYUserInterfaceAgent
 {
     __strong id <TYAppUI> ui;
+    __strong id <TYAppUI> quoteUi;
 }
 
-- (id)initWith:(id <TYAppUI>)theAppUI
+- (id)initWith:(id <TYAppUI>)theAppUI quoteUi:(id<TYAppUI>)theQuoteUI
 {
     self = [super init];
     if(self)
     {
         ui = theAppUI;
+        quoteUi = theQuoteUI;
     }
     return self;
 }
@@ -35,10 +38,12 @@
     
     [eventBus subscribeTo:SHORT_BREAK_START subscriber:^(id eventData) {
         [ui switchToShortBreakState];
+        [quoteUi switchToShortBreakState];
     }];
     
     [eventBus subscribeTo:LONG_BREAK_START subscriber:^(id eventData) {
         [ui switchToLongBreakState];
+        [quoteUi switchToShortBreakState];
     }];
     
     [eventBus subscribeTo:TIMER_TICK subscriber:^(id eventData) {

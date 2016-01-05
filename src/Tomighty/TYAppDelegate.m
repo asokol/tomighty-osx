@@ -30,6 +30,7 @@
 #import "TYDefaultTimer.h"
 #import "TYDefaultTomighty.h"
 #import "TYUserDefaultsPreferences.h"
+#import "TYQuoteUI.h"
 
 #import "TYPreferencesWindowController.h"
 
@@ -54,11 +55,12 @@
     id <TYStatusIcon> statusIcon = [[TYDefaultStatusIcon alloc] initWith:self.statusMenu imageLoader:imageLoader];
     id <TYStatusMenu> statusMenu = self;
     id <TYAppUI> appUi = [[TYDefaultAppUI alloc] initWith:statusMenu statusIcon:statusIcon];
+    id <TYAppUI> quoteUi = [[TYQuoteUI alloc] init];
     
     preferences = [[TYUserDefaultsPreferences alloc] initWith:eventBus];
     soundAgent = [[TYSoundAgent alloc] initWith:soundPlayer preferences:preferences];
     syntheticEventPublisher = [[TYSyntheticEventPublisher alloc] init];
-    userInterfaceAgent = [[TYUserInterfaceAgent alloc] initWith:appUi];
+    userInterfaceAgent = [[TYUserInterfaceAgent alloc] initWith:appUi quoteUi:quoteUi];
     tomighty = [[TYDefaultTomighty alloc] initWith:timer preferences:preferences eventBus:eventBus];
     
     [syntheticEventPublisher publishSyntheticEventsInResponseToOtherEventsFrom:eventBus];

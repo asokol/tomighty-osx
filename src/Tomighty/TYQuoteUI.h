@@ -8,11 +8,11 @@
 #import <Foundation/Foundation.h>
 
 #import "TYAppUI.h"
-#import "TYEventBus.h"
+#import "TYStatusIcon.h"
+#import "TYStatusMenu.h"
 
-@interface TYUserInterfaceAgent : NSObject
+@interface TYQuoteUI : NSObject <TYAppUI>
 
-- (id)initWith:(id <TYAppUI>)ui quoteUi:(id<TYAppUI>)quoteUi;
-- (void)updateAppUiInResponseToEventsFrom:(id <TYEventBus>)eventBus;
+- (NSString*)randomQuote;
 
 @end

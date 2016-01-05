@@ -63,6 +63,7 @@
 		30CFBF1218BD76F7000266B4 /* TYMockSystemTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30CFBF1118BD76F7000266B4 /* TYMockSystemTimer.m */; };
 		30DB72F618CD4FC800293915 /* TYTomightyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DB72F518CD4FC800293915 /* TYTomightyTests.m */; };
 		30DB72FA18CD54D200293915 /* TYDefaultTomighty.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DB72F918CD54D200293915 /* TYDefaultTomighty.m */; };
+		893BB8821C3B8A28002A21DE /* TYQuoteUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 893BB8811C3B8A28002A21DE /* TYQuoteUI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +181,8 @@
 		30DB72F718CD54C000293915 /* TYTomighty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TYTomighty.h; path = Core/TYTomighty.h; sourceTree = "<group>"; };
 		30DB72F818CD54D200293915 /* TYDefaultTomighty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TYDefaultTomighty.h; path = Core/TYDefaultTomighty.h; sourceTree = "<group>"; };
 		30DB72F918CD54D200293915 /* TYDefaultTomighty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TYDefaultTomighty.m; path = Core/TYDefaultTomighty.m; sourceTree = "<group>"; };
+		893BB8801C3B89E1002A21DE /* TYQuoteUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TYQuoteUI.h; sourceTree = "<group>"; };
+		893BB8811C3B8A28002A21DE /* TYQuoteUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYQuoteUI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +379,8 @@
 				309394E918D0CBEC00D6C71A /* TYImageLoader.m */,
 				300AE29318D1471F00264309 /* TYPreferencesWindowController.h */,
 				300AE29418D1471F00264309 /* TYPreferencesWindowController.m */,
+				893BB8801C3B89E1002A21DE /* TYQuoteUI.h */,
+				893BB8811C3B8A28002A21DE /* TYQuoteUI.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -610,6 +615,7 @@
 				300AE29518D1471F00264309 /* TYPreferencesWindowController.m in Sources */,
 				30DB72FA18CD54D200293915 /* TYDefaultTomighty.m in Sources */,
 				301A007918BD417200B8DEE0 /* TYDefaultTimer.m in Sources */,
+				893BB8821C3B8A28002A21DE /* TYQuoteUI.m in Sources */,
 				309394E718D0C76100D6C71A /* TYDefaultStatusIcon.m in Sources */,
 				305D161918CD030400CE6A34 /* TYUserInterfaceAgent.m in Sources */,
 				309C5B1D18C636BB001B4359 /* TYSoundAgent.m in Sources */,
